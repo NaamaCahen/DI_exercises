@@ -1,0 +1,85 @@
+*{
+    
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+    margin: 0;
+
+}
+body{
+}
+section{
+    display: flex;
+}
+#leftDiv{
+    background-color: rgb(243, 240, 240);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#leftDiv h1{
+    text-align: center;
+    font-size: 10vh;
+}
+#leftDiv .emailPassword{
+    border: 0;
+    margin: 1%;
+    width: 70%;
+    align-self: center;
+    padding: 1%;
+}
+#leftDiv #rememberForgot{
+    display: flex;
+    justify-content: space-around;
+}
+#leftDiv button{
+    align-self: center;
+    width: 70%;
+    background-color: #601e79;
+    border: 0;
+    padding: 2%;
+    margin: 1%;
+    font-size: 1.5em;
+}
+#leftDiv #connect{
+    align-self: center;
+}
+#leftDiv #copy{
+    align-self: center;
+    
+}
+#rightDiv{
+    background-image: linear-gradient(rgb(43, 0, 49),rgb(136, 6, 159),#0081B6,#601e79   );
+    background-clip: border-box;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+
+.material-symbols-outlined {
+    font-size: 25vw;
+ 
+}
+#rightDiv h1{
+    font-size: 5vw;
+}
+#rightDiv #register{
+    display: flex;
+    
+    border: 2px white solid;
+    padding: 3%;
+    border-radius: 30%;
+    align-items: center;
+    margin-top: 4%;
+}
+#arrow{
+    font-size: 5vw;
+
+}
+
