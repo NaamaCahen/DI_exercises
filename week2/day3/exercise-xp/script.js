@@ -118,3 +118,33 @@ for(let key in family){
 for(let key in family){
     console.log(family[key]);
 }
+
+console.log('***************************');
+
+
+//exercise6
+const details = {
+    my: 'name',
+    is: 'Rudolf',
+    the: 'raindeer'
+  }
+ //Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”
+ let sentence='';
+ for(let key in details){
+    sentence+= key+' '+details[key]+' ';
+} 
+console.log(sentence);
+
+console.log('***************************');
+
+
+//exercise7
+let names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+// A group of friends have decided to start a secret society. The society’s name will be the first letter of each of their names sorted in alphabetical order.
+names=names.sort();
+//Console.log the name of their secret society. The output should be “ABJKPS”
+let society='';
+for(let name of names){
+    society+=name[0];
+}
+console.log(society);
