@@ -11,7 +11,7 @@ let wordBad=sentence.indexOf("bad");
 // If the word “bad” comes after the word “not”, you should replace the whole “not…bad” substring with “good”, then console.log the result.
 // For example, the result here should be : “The movie is good, I like it”
 let subs;
-if(wordBad > wordNot){
+if(wordBad > wordNot && wordBad!== -1 && wordNot!== -1){
     subs = sentence.substring(wordNot,wordBad+3);
     sentence=sentence.replace(subs,"good");
 }
