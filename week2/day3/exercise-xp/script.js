@@ -36,3 +36,37 @@ for (let j of people) {
 
 
 
+//exercise2
+// 	Create an array called colors where the value is a list of your five favorite colors.
+let colors=["yellow","blue",'green','bordo','white'];
+// 	Loop through the array and as you loop console.log a string like so: “My #1 choice is blue”, “My #2 choice is red” ect… .
+for(let i=0; i<colors.length; i++){
+    console.log(`my #${i+1} favorite color is: ${colors[i]}`);
+}
+// 	Bonus: Change it to console.log “My 1st choice”, “My 2nd choice”, “My 3rd choice”, picking the correct suffix for each number.
+const suffixes=['st','nd','rd','th','th'];
+for(let i=0; i<colors.length; i++){
+    console.log(`my ${i+1}${suffixes[i]} choice is: ${colors[i]}`);
+}
+
+
+
+//exercise3
+
+// Prompt the user for a number.
+ let num= prompt('please type a number');
+ console.log(typeof num);
+ //  While the number is smaller than 10 continue asking the user for a new number.
+ //checking if it is a number
+ while(num < 10 || isNaN(num)){
+  
+    num= prompt('please retype a number')
+}
+ console.log(num);
+
+
+
+
+ //exercise4
+
+
