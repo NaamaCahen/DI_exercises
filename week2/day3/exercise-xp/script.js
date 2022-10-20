@@ -33,7 +33,7 @@ for (let j of people) {
     }
 }
 
-
+console.log('***************************');
 
 
 //exercise2
@@ -48,6 +48,7 @@ const suffixes=['st','nd','rd','th','th'];
 for(let i=0; i<colors.length; i++){
     console.log(`my ${i+1}${suffixes[i]} choice is: ${colors[i]}`);
 }
+console.log('***************************');
 
 
 
@@ -64,9 +65,56 @@ for(let i=0; i<colors.length; i++){
 }
  console.log(num);
 
+ console.log('***************************');
 
 
 
  //exercise4
+ const building = {
+    numberOfFloors: 4,
+    numberOfAptByFloor: {
+        firstFloor: 3,
+        secondFloor: 4,
+        thirdFloor: 9,
+        fourthFloor: 2,
+    },
+    nameOfTenants: ["Sarah", "Dan", "David"],
+    numberOfRoomsAndRent:  {
+        sarah: [3, 990],
+        dan:  [4, 1000],
+        david: [1, 500],
+    },
+}
+//Console.log the number of floors in the building.
+console.log(building['numberOfFloors']);
+//Console.log how many apartments are on the floors 1 and 3.
+console.log(`rhere are ${building['numberOfAptByFloor']['firstFloor']} aprtments on the first floor, and ${building['numberOfAptByFloor']['thirdFloor']}`);
+//Console.log the name of the second tenant and the number of rooms he has in his apartment.
+let second=building['nameOfTenants'][1]
+console.log(second, building['numberOfRoomsAndRent'][second.toLowerCase()][0]);
+// Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If it is, than increase Dan’s rent to 1200.
+let short=building['numberOfRoomsAndRent'];
+if(short['sarah'][1]+short['david'][1]>short['dan'][1]){
+    short['dan'][1]=1200;
+}
+console.log(short['dan'][1]);
+console.log('***************************');
 
 
+
+//exercise5
+//Create an object called family with a few key value pairs.
+let family={
+    Fname:'Cahen',
+    address:'Pinkas 15',
+    numChildren:7
+
+}
+//Using a for in loop, console.log the keys of the object.
+for(let key in family){
+    console.log(key);
+}
+//Using a for in loop, console.log the values of the object.
+for(let key in family){
+    console.log(family[key]);
+}
