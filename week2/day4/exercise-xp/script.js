@@ -89,15 +89,15 @@ let shoppingList = ['banana', 'orange', 'apple'];
 // The item must be in stock. 
 // If the item is in stock find out the price in the prices object.
 function myBill() {
-    let sum=0;
+    let sum = 0;
     for (fruit of shoppingList) {
-        if(stock[fruit]>0){
-            sum+=prices[fruit];
+        if (stock[fruit] > 0) {
+            sum += prices[fruit];
             stock[fruit]--;//Bonus: If the item is in stock, decrease the item’s stock by 1
 
         }
     }
-    console.log('you have to pay:'+sum);
+    console.log('you have to pay:' + sum);
 }
 // Call the myBill() function.
 myBill();
@@ -105,4 +105,68 @@ myBill();
 
 
 
+//exercise5
+function changeEnough(itemPrice, amountOfChange) {
+    let sum = 0;
+    sum += amountOfChange[0] * 0.25;
+    sum += amountOfChange[1] * 0.10;
+    sum += amountOfChange[2] * 0.05;
+    sum += amountOfChange[3] * 0.01;
+    if (sum >= itemPrice) {
+        return true;
+    }
+    return false;
+}
 
+changeEnough(14.11, [2, 100, 0, 0]);
+changeEnough(0.75, [0, 0, 20, 5]);
+
+
+
+//🌟 Exercise 6 : Vacations Costs
+
+//Define a function called hotelCost().
+function hotelCost() {
+    let askUser = prompt(`whats's the number of nights you would like to stay in the hotel?`);
+    while (isNaN(askUser) || askUser === '') {
+        askUser = prompt(`whats's the NUMBER of nights you would like to stay in the hotel?`);
+    }
+    return askUser * 140;
+}
+
+//Define a function called planeRideCost()
+function planeRideCost() {
+    let destination = prompt(`what's your destination?`);
+    while (!isNaN(Number(destination))  || destination === '') {
+        destination = prompt(`what's your DESTINATION?`);
+    }
+    if(destination.toLowerCase()==='london'){
+        return 183;
+    }if(destination.toLowerCase()==='paris'){
+        return 220;
+    }
+    return 300;
+}
+
+//Define a function called rentalCarCost()
+function rentalCarCost(){
+    let numRent=prompt(`how many days do you want to rent a car?`);
+    while(isNaN(numRent) || numRent===''){
+        numRent=prompt(`how many DAYS do you want to rent a car?`);
+    }
+    if(numRent<=10){
+        return numRent*40;
+    }
+    if(numRent>10){
+        return 0.95(numRent*40);
+    }
+}
+
+//Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
+function totalVacationCost(){
+    return `the car costs: ${rentalCarCost()}$, the hotel costs: ${hotelCost()}$ and the flight costs:${planeRideCost()}$`;
+
+}
+//Call the function totalVacationCost()
+
+console.log(totalVacationCost());
