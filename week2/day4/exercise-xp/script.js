@@ -126,45 +126,59 @@ changeEnough(0.75, [0, 0, 20, 5]);
 //🌟 Exercise 6 : Vacations Costs
 
 //Define a function called hotelCost().
-function hotelCost() {
-    let askUser = prompt(`whats's the number of nights you would like to stay in the hotel?`);
-    while (isNaN(askUser) || askUser === '') {
-        askUser = prompt(`whats's the NUMBER of nights you would like to stay in the hotel?`);
-    }
-    return askUser * 140;
+function hotelCost(numHotel) {
+    /*let numHotel = prompt(`whats's the number of nights you would like to stay in the hotel?`);
+    while (isNaN(numHotel) || numHotel === '') {
+        numHotel = prompt(`whats's the NUMBER of nights you would like to stay in the hotel?`);
+    }*/
+    return numHotel * 140;
 }
 
 //Define a function called planeRideCost()
-function planeRideCost() {
-    let destination = prompt(`what's your destination?`);
-    while (!isNaN(Number(destination))  || destination === '') {
-        destination = prompt(`what's your DESTINATION?`);
-    }
-    if(destination.toLowerCase()==='london'){
+function planeRideCost(destination) {
+    /* let destination = prompt(`what's your destination?`);
+     while (!isNaN(Number(destination))  || destination === '') {
+         destination = prompt(`what's your DESTINATION?`);
+     }*/
+    if (destination.toLowerCase() === 'london') {
         return 183;
-    }if(destination.toLowerCase()==='paris'){
+    } if (destination.toLowerCase() === 'paris') {
         return 220;
     }
     return 300;
 }
 
 //Define a function called rentalCarCost()
-function rentalCarCost(){
-    let numRent=prompt(`how many days do you want to rent a car?`);
-    while(isNaN(numRent) || numRent===''){
-        numRent=prompt(`how many DAYS do you want to rent a car?`);
+function rentalCarCost(numRent) {
+    /* let numRent=prompt(`how many days do you want to rent a car?`);
+     while(isNaN(numRent) || numRent===''){
+         numRent=prompt(`how many DAYS do you want to rent a car?`);
+     }*/
+    if (numRent <= 10) {
+        return numRent * 40;
     }
-    if(numRent<=10){
-        return numRent*40;
-    }
-    if(numRent>10){
-        return 0.95(numRent*40);
+    if (numRent > 10) {
+        return 0.95*(numRent * 40);
     }
 }
 
 //Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
-function totalVacationCost(){
-    return `the car costs: ${rentalCarCost()}$, the hotel costs: ${hotelCost()}$ and the flight costs:${planeRideCost()}$`;
+function totalVacationCost() {
+    //bonus
+    let numHotel = prompt(`whats's the number of nights you would like to stay in the hotel?`);
+    while (isNaN(numHotel) || numHotel === '') {
+        numHotel = prompt(`whats's the NUMBER of nights you would like to stay in the hotel?`);
+    }
+    let destination = prompt(`what's your destination?`);
+    while (!isNaN(Number(destination)) || destination === '') {
+        destination = prompt(`what's your DESTINATION?`);
+    }
+    let numRent = prompt(`how many days do you want to rent a car?`);
+    while (isNaN(numRent) || numRent === '') {
+        numRent = prompt(`how many DAYS do you want to rent a car?`);
+    }
+
+    return `the car costs: ${rentalCarCost(numRent)}$, the hotel costs: ${hotelCost(numHotel)}$ and the flight costs:${planeRideCost(destination)}$`;
 
 }
 //Call the function totalVacationCost()
