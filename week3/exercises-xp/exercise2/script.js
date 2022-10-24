@@ -17,3 +17,5 @@ if(div1.style.backgroundColor==='lightblue'){
     alert(`hello ${liJohn.innerHTML} and ${liPete.innerHTML}`)
 }
 }
+
+alertIfBlue();
