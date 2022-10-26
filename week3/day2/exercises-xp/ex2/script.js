@@ -39,5 +39,6 @@ function mySubmit(event) {
         const ul=document.querySelector('ul');
         ul.appendChild(li1);
         ul.appendChild(li2);
+        // ul.append(li1,li2);
     }
 }
