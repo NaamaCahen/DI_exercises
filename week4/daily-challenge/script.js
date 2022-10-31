@@ -41,11 +41,9 @@ arrayUsers();
 //    const winners = ["becky", "susy"]
 function winner(){
 const winners = [];
-let index = 0;
 gameInfo.forEach((element) => {
     if (element.score > 5) {
-        winners[index] = element.username;
-        index++;
+        winners.push(element.username);
     }
 });
 console.log(winners);
