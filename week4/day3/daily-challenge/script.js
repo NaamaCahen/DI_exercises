@@ -14,10 +14,11 @@ const inventory = [
     { id: 5, car_make: "Honda", car_model: "Accord", car_year: 1995 },
 ];
 function getCarHonda(carInventory) {
-    const honda = carInventory.find((element) => element.car_make = "Honda");
-    return ` This is a ${honda.car_make} ${honda.car_model} from ${honda.car_year}`
+    const honda = carInventory.find((element) => element.car_make === "Honda");
+    return ` This is a ${honda.car_make} ${honda.car_model} from ${honda.car_year}`;
 }
-getCarHonda(inventory);
+const honda=getCarHonda(inventory);
+console.log(honda);
 // Part II
 
 // Create a function sortCarInventoryByYear(carInventory) that takes a single parameter. carInventory‘s value is an array which is an inventory of cars (see the array of objects below)
@@ -36,7 +37,8 @@ getCarHonda(inventory);
 
 
 function sortCarInventoryByYear(carInventory) {
-    const sorted = carInventory.sort((a, b) => a.car_year - b.car_year);
-    console.log(sorted);
+    carInventory.sort((a, b) => a.car_year - b.car_year);
+    console.log(carInventory); 
 }
 sortCarInventoryByYear(inventory);
+console.log(inventory);
