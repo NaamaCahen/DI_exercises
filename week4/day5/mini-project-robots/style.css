@@ -1,4 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(116, 34, 116);
+    background-image: url(circuit-pattern.png);
+
+}
+nav{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(88, 213, 88);
+    height: 10vh;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav>p{
+    margin-right: 10px;
+    font-size: 2em;
+}
+input{
+    width: 30vw;
+}
 #cards{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.divCard{
+    background-color: rgb(89, 89, 238);
+    border: 1px rgb(251, 245, 251) solid;
+    border-radius: 5%;
+    background-image: url(card-pattern.png);
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+#imgRobot{
+    border-radius: 50%;
+    background-color: rgb(27, 27, 67);
+    margin: 12px;
+}
+.divCard>p{
+    font-weight: bold;
+    font-size: 2em;
+    font-family: monospace;
 }

@@ -84,7 +84,9 @@ const robots = [
         emailRobot.href = element.email;
         emailRobot.textContent = element.email;
         divCard.append(imgRobot, nameRobot, emailRobot);
+        imgRobot.setAttribute("id","imgRobot")
         divCard.setAttribute("id", element.id);
+        divCard.classList.add("divCard");
         const section = document.querySelector("#cards");
         section.appendChild(divCard);
     })
