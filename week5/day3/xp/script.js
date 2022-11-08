@@ -34,4 +34,10 @@ return promise2;
 }
 ex2().then(result => console.log(result)).catch(result => console.log(result));
 
-Promise.resolve("success").then(result=>console.log(result));
+const promise=Promise.resolve(setTimeout(()=>{console.log("Success")},4000))
+
+promise.then(console.log).catch(err=>console.error("oops something went wrong",err))
+
+//ex3
+Promise.resolve(3);
+Promise.reject("Boo!");
