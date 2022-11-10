@@ -1,0 +1,1 @@
+document.getElementById("find").addEventListener("click",findCharachter)
