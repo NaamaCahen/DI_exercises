@@ -1,0 +1,26 @@
+
+body{
+    background-image:url(https://images.pexels.com/photos/210574/pexels-photo-210574.jpeg) ;
+    background-size: cover;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+form{
+    /* background-color: grey; */
+   width: 30vw;
+   margin-left: 35vw;
+   height: 50vh;
+   margin-top: 25vh;
+   
+   /* opacity: 0.5; */
+}
+#switch>img{
+    width: 5vw;
+}
+#switch,#from,#to,#amount{
+    margin: 4vh
+}
+label{
+    font-size: 2em;
+}
