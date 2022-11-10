@@ -10,10 +10,12 @@
         option2.textContent=[...code];
         document.getElementById("to").appendChild(option2);
     })
+    document.getElementById("switch").addEventListener("click",switchFunc);
+    document.querySelector("form").addEventListener("submit",convert);
 })()
 
 
-document.querySelector("form").addEventListener("submit",convert);
+
 
 async function convert(event){
     event.preventDefault();
@@ -23,4 +25,13 @@ async function convert(event){
     const convert= await fetch(`https://v6.exchangerate-api.com/v6/b686183d16f0afdec1fc52b9/pair/${base}/${target}/${amount}`);
     const objConvert=await convert.json();
     document.getElementById("result").value=objConvert.conversion_result;
+}
+
+function switchFunc(event){
+    event.preventDefault();
+    const base=document.getElementById("from").value;
+    const target=document.getElementById("to").value;
+    document.getElementById("from").value=target;
+    document.getElementById("to").value=base;
+    document.getElementById("result").value='';
 }
