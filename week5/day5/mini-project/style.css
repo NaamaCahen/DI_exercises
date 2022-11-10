@@ -1,3 +1,17 @@
+body{
+    background-image:url("https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp") ;
+}
+img{
+    margin: auto;
+}
 #container{
-    border: 2px yellow solid;
+    margin: auto;
+    border: 3px yellow solid;
+    color: yellow;
+    height: 25vh;
+    width: 50%;
+    border-radius: 15%;
+}
+#loading{
+    display: none;
 }
