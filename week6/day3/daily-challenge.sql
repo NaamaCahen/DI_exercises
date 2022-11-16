@@ -31,9 +31,9 @@ VALUES('true',(SELECT customer_id FROM customer WHERE first_name='John')),('fals
 SELECT* FROM customer_profile;
 -- Use the relevant types of Joins to display:
 
--- The first_name of the LoggedIn customers
+-- The first_name of the LoggedIn customers LEFT 
 -- All the customers first_name and isLoggedIn columns - even the customers those who don’t have a profile.
 -- The number of customers that are not LoggedIn
 SELECT first_name FROM customer JOIN customer_profile ON customer.customer_id=customer_profile.customer_id WHERE customer_profile.isLoggedIn=true;
-SELECT first_name,isLoggedIn FROM customer JOIN customer_profile ON customer.customer_id=customer_profile.customer_id ;
+SELECT first_name,isLoggedIn FROM customer LEFT JOIN customer_profile ON customer.customer_id=customer_profile.customer_id ;
 SELECT count(*) AS notLoggedIn FROM customer_profile WHERE isLoggedIn=false;
