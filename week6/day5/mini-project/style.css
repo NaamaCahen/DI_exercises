@@ -1,0 +1,18 @@
+.task{
+    border: 2px black solid;
+}
+.uncompleted{
+    background-color: red;
+}
+.completed{
+    background-color: rgb(48, 214, 48);
+}
+.passed{
+    background-color: rgb(209, 209, 97);
+}
+
+.hide{
+    display: none;
+}
+  
+  .show {display: block;}
