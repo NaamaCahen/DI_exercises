@@ -1,0 +1,1 @@
+document.forms.form1.addEventListener('submit')
