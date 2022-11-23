@@ -1,7 +1,11 @@
 const express =require('express');
 const cors =require("cors");
-const app=express();
+
+app.use('/pic',express.static(__dirname));
+app.use('/form',express.static(__dirname+'/public'));
 app.use(cors());
+
+const app=express();
 app.listen(8080,()=>console.log('server is listening on 8080'));
 app.get('/aboutMe/:hobby',(req,res)=>{
     const {hobby}=req.params;
@@ -11,9 +15,7 @@ app.get('/aboutMe/:hobby',(req,res)=>{
     res.json({hobby:hobby});
 })
 
-app.use('/pic',express.static(__dirname));
 
-app.use('/form',express.static(__dirname+'/public'));
 app.get('/form/formData',(req,res)=>{
     const {email,message}=req.query;
     res.end(`<p>${email} sent you a message: ${message}`);
