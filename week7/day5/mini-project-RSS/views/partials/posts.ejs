@@ -1,0 +1,10 @@
+<% data.items.forEach(item=>{ %>
+    <div><h2><%= item.title %></h2>
+        <a href= <%= item.link %> >link to the post</a>
+        <p>publishing date:  <%=item.pubDate %></p>
+        <p>creator:  <%= item.creator %></p> 
+        <p>category:  <%=item.categories %></p>
+        <%- item.content %>
+        <p></p>
+    </div>
+<%})%>
