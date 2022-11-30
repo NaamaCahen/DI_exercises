@@ -4,6 +4,7 @@ import Car from './components/Car';
 import Events from './components/Events';
 import Phone from './components/Phone'
 import Color from './components/Color';
+import Child from './components/Child';
 
 const carinfo = {name: "Ford", model: "Mustang"};
 function App() {
@@ -13,6 +14,7 @@ function App() {
      <Events />
      <Phone />
      <Color />
+     <Child />
     </div>
   );
 }
