@@ -15,7 +15,7 @@ class Game extends React.Component {
         const id=e.target.parentElement.id;
         if(this.state.actors[id-1].clicked===false){
             this.setState({score:this.state.score+1})
-            this.state.actors[id-1].clicked=true;
+            this.setState({[actors[id-1].clicked]:true});
             if(this.state.score>=this.state.topScore){
                 this.setState({topScore:this.state.score+1})
             }
